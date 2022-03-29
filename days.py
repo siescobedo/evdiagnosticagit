@@ -1,7 +1,3 @@
-def top_days(data):
-    out = data['date'].dt.date.value_counts().head(10)
-
-
 def top10_days(tweets):
     days = Counter(k["date"] for k in tweets)
     sorted_days = sorted(days.items(), key=lambda item: item[1], reverse=True)
